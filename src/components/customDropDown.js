@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {Dropdown} from 'react-native-material-dropdown';
-import {onChange} from 'react-native-reanimated';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const CustomDropdown = ({
@@ -11,10 +9,6 @@ const CustomDropdown = ({
   containerStyles,
   error,
   value,
-  textColor,
-  baseColor,
-  itemColor,
-  ...otherProps
 }) => {
   const [showPicker, setShowPicker] = useState(false);
   useEffect(() => {
@@ -84,7 +78,6 @@ const styles = StyleSheet.create({
   },
   error: {
     color: 'red',
-    // paddingLeft: 15,
     paddingTop: 6,
     fontSize: 14,
   },

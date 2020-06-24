@@ -10,14 +10,14 @@ const Initialize = ({navigation}) => {
       let result = await AsyncStorage.getItem('User');
       if (!result) {
         /**
-         * this reset the stack and push Login stack at 0 index
+         * this reset the stack and push Login stack at 0
          */
         navigation.dispatch(
           CommonActions.reset({
             index: 0,
             routes: [
               {
-                name: 'Home',
+                name: 'Login',
               },
             ],
           }),
